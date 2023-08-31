@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+	<user place="Albany" name="Fruit from the Forest" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Albany@scooters.com</email>
+		<account currency="USD">500</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>15 Main St</line>
+			<zip>12201</zip>
+			<state>New York</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Bronx" name="Wildlife North Pole" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Bronx@scooters.com</email>
+		<account currency="USD">-600</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>1 Zebra Crossing</line>
+			<zip>10451</zip>
+			<state>New York</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Madison" name="Knicker Broker Glory" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Madison@scooters.com</email>
+		<account currency="USD">-1000</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>50 Pine Hill</line>
+			<zip>03849</zip>
+			<state>New York</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Niagara" name="Freeze Dry" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Niagara@scooters.com</email>
+		<account currency="USD">-300</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>NIAGARA UNIVERSITY</line>
+			<zip>14109</zip>
+			<state>New York</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Queens" name="Elizabeth Queen of the Ice" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Queens@scooters.com</email>
+		<account currency="USD">400</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>82ND AVE QUEENS VILLAGE</line>
+			<zip>11427</zip>
+			<state>New York</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Austin" name="Jane's Withering Heights" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Austin@scooters.com</email>
+		<account currency="USD">200</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>INTERNAL REVENUE SERVICE, AUSTIN TX 73301-0001</line>
+			<zip>73301</zip>
+			<state>Texas</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Hollywood" name="The Bigg Chill" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Holly@scooters.com</email>
+		<account currency="USD">750</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>50 Rodeo Drive</line>
+			<zip>90064</zip>
+			<state>LA</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Seattle" name="Iceberg.com" group="store">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>BezoOrBust@scooters.com</email>
+		<account currency="USD">-140</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>1 Amazon Rain Forest</line>
+			<zip>98101</zip>
+			<state>Washington</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Washington" name="Chilli Dairy" group="supplier">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>Bemail@chilli.com</email>
+		<account currency="USD">-1500</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>12 Amazon Rain Forest</line>
+			<zip>98101</zip>
+			<state>Washington</state>
+			<country>US</country>
+		</address>
+	</user>
+	<user place="Dublin" name="Choco Holics Dream" group="supplier">
+		<!--user (password, email*, address?) -->
+		<password>adminpw</password>
+		<email>email@Dream.com</email>
+		<account currency="Punts">-1040</account>
+		<address>
+			<!--address (line*, zip, state, country?) -->
+			<line>1 Grafton St</line>
+			<zip>Dublin 18</zip>
+			<state>Dublin</state>
+			<country>Ireland</country>
+		</address>
+	</user>
+</users>

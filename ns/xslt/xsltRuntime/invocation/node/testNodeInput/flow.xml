@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.xml:xmlStringToXMLNode" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">xmlStringToXMLNodeInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">xmldata</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">$filedata</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">$filestream</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">encoding</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">expandDTD</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">isXML</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+          <value>autoDetect</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/xmldata;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Class&gt;
+&lt;Order Name="TINAMIFORMES"&gt;
+        &lt;Family Name="TINAMIDAE"&gt;
+            &lt;Species Scientific_Name="Tinamus major"&gt;  Great Tinamou.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Nothocercus"&gt;Highland Tinamou.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Crypturellus soui"&gt;Little Tinamou.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Crypturellus cinnamomeus"&gt;Thicket Tinamou.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Crypturellus boucardi"&gt;Slaty-breasted Tinamou.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Crypturellus kerriae"&gt;Choco Tinamou.&lt;/Species&gt;
+        &lt;/Family&gt;
+    &lt;/Order&gt;
+&lt;Order Name="GAVIIFORMES"&gt;
+        &lt;Family Name="GAVIIDAE"&gt;
+            &lt;Species Scientific_Name="Gavia stellata"&gt;Red-throated Loon.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Gavia arctica"&gt;Arctic Loon.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Gavia pacifica"&gt;Pacific Loon.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Gavia immer"&gt;Common Loon.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Gavia adamsii"&gt;Yellow-billed Loon.&lt;/Species&gt;
+        &lt;/Family&gt;
+    &lt;/Order&gt;
+
+
+&lt;Order Name="PODICIPEDIFORMES"&gt;
+        &lt;Family Name="PODICIPEDIDAE"&gt;
+            &lt;Species Scientific_Name="Tachybaptus dominicus"&gt;Least Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Podilymbus podiceps"&gt;Pied-billed Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Atitlan Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Horned Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Red-necked Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Eared Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Western Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""&gt;Clark's Grebe.&lt;/Species&gt;
+            &lt;Species Scientific_Name=""/&gt;
+        &lt;/Family&gt;
+    &lt;/Order&gt;
+
+
+&lt;Order Name="PROCELLARIIFORMES"&gt;
+        &lt;Family Name="DIOMEDEIDAE"&gt;
+            &lt;Species Scientific_Name="Thalassarche chlororhynchos"&gt;Yellow-nosed Albatross. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Thalassarche cauta"&gt;Shy Albatross. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Thalassarche melanophris"&gt;Black-browed Albatross. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phoebetria palpebrata"&gt;Light-mantled Albatross. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Diomedea exulans"&gt;Wandering Albatross. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phoebastria immutabilis"&gt;Laysan Albatross.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phoebastria nigripes"&gt;Black-footed Albatross.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phoebastria albatrus"&gt;Short-tailed Albatross. (N)&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="PROCELLARIIDAE"&gt;
+            &lt;Species Scientific_Name="Fulmarus glacialis"&gt;Northern Fulmar.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma neglecta"&gt;Kermadec Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma arminjoniana"&gt;Herald Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma ultima"&gt;Murphy's Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma inexpectata"&gt;Mottled Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma cahow"&gt;Bermuda Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma hasitata"&gt;Black-capped Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma externa"&gt;Juan Fernandez Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma phaeopygia"&gt;Dark-rumped Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma cervicalis"&gt;White-necked Petrel. (H)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma hypoleuca"&gt;Bonin Petrel. (H)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma nigripennis"&gt;Black-winged Petrel. (H, A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma cookii"&gt;Cook's Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pterodroma longirostris"&gt;Stejneger's Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Bulweria bulwerii"&gt;Bulwer's Petrel. (H)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Bulweria fallax"&gt;Jouanin's Petrel. (H, A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Procellaria parkinsoni"&gt;Parkinson's Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Calonectris leucomelas"&gt;Streaked Shearwater. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Calonectris diomedea"&gt;Cory's Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus creatopus"&gt;Pink-footed Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus carneipes"&gt;Flesh-footed Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus gravis"&gt;Greater Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus pacificus"&gt;Wedge-tailed Shearwater.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus bulleri"&gt;Buller's Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus griseus"&gt;Sooty Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus tenuirostris"&gt;Short-tailed Shearwater. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus nativitatis"&gt;Christmas Shearwater. (H)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus puffinus"&gt;Manx Shearwater.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus auricularis"&gt;Townsend's Shearwater.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus opisthomelas"&gt;Black-vented Shearwater.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus lherminieri"&gt;Audubon's Shearwater.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Puffinus assimilis"&gt;Little Shearwater. (A)&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="HYDROBATIDAE"&gt;
+            &lt;Species Scientific_Name="Oceanites oceanicus"&gt;Wilson's Storm-Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pelagodroma marina"&gt;White-faced Storm-Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Hydrobates pelagicus"&gt;European Storm-Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma furcata"&gt;Fork-tailed Storm-Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma leucorhoa"&gt;Leach's Storm-Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma homochroa"&gt;Ashy Storm-Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma castro"&gt;Band-rumped Storm-Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma tethys"&gt;Wedge-rumped Storm-Petrel. (N)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma melania"&gt;Black Storm-Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma macrodactyla"&gt;Guadalupe Storm-Petrel.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma markhami"&gt;Markham's Storm-Petrel. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma tristrami"&gt;Tristram's Storm-Petrel. (H)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Oceanodroma microsoma"&gt;Least Storm-Petrel.&lt;/Species&gt;
+        &lt;/Family&gt;
+    &lt;/Order&gt;
+
+&lt;Order Name="PELECANIFORMES"&gt;
+        &lt;Family Name="PHAETHONTIDAE"&gt;
+            &lt;Species Scientific_Name="Phaethon lepturus"&gt;White-tailed Tropicbird.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phaethon aethereus"&gt;Red-billed Tropicbird.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phaethon rubricauda"&gt;Red-tailed Tropicbird.&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="SULIDAE"&gt;
+            &lt;Species Scientific_Name="Sula dactylatra"&gt;Masked Booby.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Sula nebouxii"&gt;Blue-footed Booby.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Sula variegata"&gt;Peruvian Booby. (A)&lt;/Species&gt;
+            &lt;Species Scientific_Name="Sula leucogaster"&gt;Brown Booby.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Sula sula"&gt;Red-footed Booby.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Morus bassanus"&gt;Northern Gannet.&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="PELECANIDAE"&gt;
+            &lt;Species Scientific_Name="Pelecanus erythrorhynchos"&gt;American White Pelican.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Pelecanus occidentalis"&gt;Brown Pelican.&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="PHALACROCORACIDAE"&gt;
+            &lt;Species Scientific_Name="Phalacrocorax penicillatus"&gt;Brandt's Cormorant.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phalacrocorax brasilianus"&gt;Neotropic Cormorant.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phalacrocorax auritus"&gt;Double-crested Cormorant.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phalacrocorax carbo"&gt;Great Cormorant.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phalacrocorax urile"&gt;Red-faced Cormorant.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Phalacrocorax pelagicus"&gt;Pelagic Cormorant.&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="ANHINGIDAE"&gt;
+            &lt;Species Scientific_Name="Anhinga anhinga"&gt;Anhinga.&lt;/Species&gt;
+        &lt;/Family&gt;
+        &lt;Family Name="FREGATIDAE"&gt;
+            &lt;Species Scientific_Name="Fregata magnificens"&gt;Magnificent Frigatebird.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Fregata minor"&gt;Great Frigatebird.&lt;/Species&gt;
+            &lt;Species Scientific_Name="Fregata ariel"&gt;Lesser Frigatebird. (A)&lt;/Species&gt;
+        &lt;/Family&gt;
+    &lt;/Order&gt;
+&lt;/Class&gt;</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">xmldata</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">xmldata</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">xmlStringToXMLNodeOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/xmldata;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="xslt.xsltRuntime.invocation.node:birds" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE TIMEOUT="" SERVICE="xslt.util:normalizeLineBreaks" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">removeCtrlRsInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">inString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">results</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">xslParamOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/results;1;0" TO="/inString;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">inString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">results</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">xslParamOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">value</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">removeCtrlRsOutput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">value</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/value;1;0" TO="/results;1;0">
+</MAPCOPY>
+</MAP>
+</INVOKE>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">inString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">results</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">xslParamOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">value</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">inString</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">node</value>
+        <value name="field_type">object</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">results</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">xslParamOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">value</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/inString;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/node;3;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/xslParamOutput;2;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/value;1;0">
+</MAPDELETE>
+</MAP>
+</FLOW>

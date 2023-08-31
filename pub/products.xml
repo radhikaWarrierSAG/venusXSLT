@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+	<!--products (product+) -->
+	<product id="p1">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Cool Vanilla</name>
+			<description>Cool Days, Hot Nights...Which way do you eat yours, answers on a postcard.</description>
+			<category>Vanilla</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/1.gif</image>
+			<brand>Hot or Cold - Any Time of the Year</brand>
+			<related_product>Vanilla Caramel Fudge</related_product>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="60" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="3">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="5">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="6">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="7">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="5">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="3">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Chilli Dairy" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p2">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Vanilla Caramel Fudge</name>
+			<description>Cold and Sticy.  Every bit makes you want more.</description>
+			<category>Vanilla</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/1.gif</image>
+			<brand>Hot or Cold - Any Time of the Year</brand>
+			<related_product>Cool Vanilla</related_product>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="2">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="3">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="7">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="4">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="3">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="6">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="7">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="7">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Chilli Dairy" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="300" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p3">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Vanilla Chocolate</name>
+			<description>Combination of the most loved creams you can get you hands on...</description>
+			<category>IceMix</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Who said Chocolate is a Substitute</brand>
+			<related_product>Cool Vanilla</related_product>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="5">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="9">4 4 4 2</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Austin" desired_level="10" current_level="8">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="14">0 0 0 0</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="15">4 4 2 5</store>
+				<store id_ref="Seattle" desired_level="15" current_level="12">5 5 3 6</store>
+			</stores>
+			<supplier desired_level="300" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p4">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Cherry Chocolate Chip</name>
+			<description>Watch you mouth curl as you bit the chips and lick the cherrys, there is nothing like it.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Who said Chocolate is a Substitute</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>100</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="3">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="5">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="6">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="8">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="8">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="8">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p5">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Chocolate Banana</name>
+			<description>If you need fruit and chocolate get a grip on this.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Tootie Fruity</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="3">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="7">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="4">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="3">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="3">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="15">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="13">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="13">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Fruit Cake Ices" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product  id="p6">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Chocolate Caramel Swirl</name>
+			<description>This rich Swiss chocolate turned and mixed with a delicate honey caramel.  Perfect for a Sunday afternoon....</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Executive Lace</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="New York" desired_level="15" current_level="15">0 0 0 0</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Austin" desired_level="10" current_level="10">0 0 0 0</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="15">0 0 0 0</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="15">0 0 0 0</store>
+				<store id_ref="Seattle" desired_level="15" current_level="15">0 0 0 0</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p7">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Chocolate Dream</name>
+			<description>Close your eyes and imagine a world of rich dark Belgium chocolate.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Executive Lace</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="3">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="5">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="6">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="7">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="5">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="3">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p8">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Chocolate Fudge Sundae</name>
+			<description>It comes with a spoon 'cause you're mouth just can't take the pleasure.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Kid's For Lunch</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="3">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">3 0 3 0</store>
+				<store id_ref="New York" desired_level="15" current_level="3">10 8 9 12</store>
+				<store id_ref="Niagara" desired_level="5" current_level="3">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="4">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="4">3 3 3 3</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="4">7 6 5 7</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="4">4 9 3 9</store>
+				<store id_ref="Seattle" desired_level="15" current_level="4">10 2 4 9</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product  id="p9">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Chocolate Macadamia Nut</name>
+			<description>Everyone's a fruit and nut case.  Well this one's got chocolate as well.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Kid's For Lunch</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="4">1 1 1 1</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">1 1 1 1</store>
+				<store id_ref="New York" desired_level="15" current_level="12">3 3 3 3</store>
+				<store id_ref="Niagara" desired_level="5" current_level="4">1 1 1 1</store>
+				<store id_ref="Queens" desired_level="5" current_level="4">1 1 1 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="8">2 2 2 2</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="12">3 3 3 3</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="12">3 3 3 3</store>
+				<store id_ref="Seattle" desired_level="15" current_level="12">3 3 3 3</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Chilli Dairy" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+	<product id="p10">
+		<!--product (required_features, optional_features, price, stock_level) -->
+		<required_features>
+			<!--required_features (name, product_id, description,category+,supplier_code)-->
+			<name>Mint Chocolate Chips!</name>
+			<description>After a long hard day, get fresh with an old friend.</description>
+			<category>Chocolate</category>
+		</required_features>
+		<optional_features>
+			<!--optional_features (image*, brand, related_product*)-->
+			<image>images/2.gif</image>
+			<brand>Executive Lace</brand>
+		</optional_features>
+		<price>
+			<!--price (standard, promotion*)-->
+			<standard retail="50" tax="A"/>
+			<promotion bulk="5" retail="45"/>
+		</price>
+		<stock_control>
+			<!--stock_control (warehouse_level, store*, supplier) -->
+			<!--store contains
+				id_ref 				A reference to the id of the relevant store
+				min_order_level			The store has to buy in bulk and order multiples of this amount
+				desired_level			The ideal level that the store would like
+				current_level			The total quantity of this product in the store
+				Text-Node (PCData)		A history of last 4 nightly shippings to the store
+			-->
+			<warehouse_level>300</warehouse_level>
+			<stores>
+				<store id_ref="Albany" desired_level="5" current_level="4">2 0 2 0</store>
+				<store id_ref="Bronx" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Madison" desired_level="5" current_level="4">1 1 1 0</store>
+				<store id_ref="New York" desired_level="15" current_level="9">6 4 6 7</store>
+				<store id_ref="Niagara" desired_level="5" current_level="5">0 0 0 0</store>
+				<store id_ref="Queens" desired_level="5" current_level="5">0 1 0 1</store>
+				<store id_ref="Austin" desired_level="10" current_level="9">2 1 2 2</store>
+				<store id_ref="Las Vegas" desired_level="15" current_level="12">4 3 2 4</store>
+				<store id_ref="Hollywood" desired_level="15" current_level="12">4 2 2 3</store>
+				<store id_ref="Seattle" desired_level="15" current_level="12">3 4 3 4</store>
+			</stores>
+			<supplier desired_level="700" id_ref="Choco Holics Dream" min_order_level="100">
+				<!--stock_control (delivery*, order*) -->
+				<!--delivery is kept until that delivery is paid for.
+				      order is awaiting deilvery 
+					once order is recieved it turns into a delivery-->
+				<delivery quantity="100" date_of_order="2001-11-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-15" unit_cost="30"/>
+				<delivery quantity="200" date_of_order="2001-12-25" unit_cost="25"/>
+				<order quantity="100" date_of_order="2001-03-11" unit_cost="35"/>
+			</supplier>
+		</stock_control>
+	</product>
+
+</products>

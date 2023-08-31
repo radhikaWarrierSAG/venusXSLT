@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<invoice date="2004/12/25">
+<by>
+	<customer>
+	<name>
+		<first>Stacy</first>
+		<second>Diehl</second>
+	</name>
+	<address>
+		<street>Survivor Island</street>
+		<country>Unknown</country>
+	</address>
+	</customer>
+</by>
+<order tax="8" delivery="6">
+	<product name="Vanilla Chocolate" id="1">
+	<price RRP="5.90"/>
+	<quantity>
+		<cone>2</cone>
+		<tub>3</tub>
+	</quantity>
+	</product>
+	<product name="Chocolate Macadamia Nut" id="2">
+		<price RRP="7.80"/>
+		<quantity>
+			<tub>6</tub>
+		</quantity>
+	</product>
+		<product name="Grapefruit" id="3">
+		<price RRP="6.40"/>
+		<quantity>
+			<cone>2</cone>
+		</quantity>
+	</product>
+</order>
+
+</invoice>

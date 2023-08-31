@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl"?>
+<invoice>
+<by>
+	<customer>
+	<name>
+		<first>Andres</first>
+		<second>Tunez</second>
+	</name>
+	<address>
+		<street>El Picho</street>
+		<country>Spain</country>
+	</address>
+	</customer>
+</by>
+<order>
+	<product name="XML in a Nutshell " id=" 0596000588">
+	<price RRP="30"/>
+	<quantity>
+		<hardback>1</hardback>
+		<softback>1</softback>
+	</quantity>
+	</product>
+	<product name="Learning XML" id="0596000464 ">
+		<price RRP="35"/>
+		<quantity>
+			<hardback>1</hardback>
+		</quantity>
+	</product>
+</order>
+
+</invoice>

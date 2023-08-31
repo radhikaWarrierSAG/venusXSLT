@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="listeners" javaclass="com.wm.util.Values">
+    <record name="HTTPSListener@9876" javaclass="com.wm.util.Values">
+      <number name="port" type="Integer">9876</number>
+      <value name="protocol">HTTPS</value>
+      <value name="pkg">venusXSLT</value>
+      <value name="enabled">true</value>
+      <value name="key">HTTPSListener@9876</value>
+      <value name="uniqueID">ae1d20c8b19e412a8d7de62d17c9353d</value>
+      <value name="portAlias">HTTPSListener_9876_venusXSLT</value>
+      <value name="portDescription">Integration Server HTTPS port: 9876</value>
+      <value name="factoryKey">webMethods/HTTP</value>
+      <value name="configURL">/WmRoot/configHTTP.dsp</value>
+      <value name="provider">webMethods</value>
+      <value name="listenerType">Regular</value>
+      <value name="clientAuth">none</value>
+      <value name="idProvider">salesforce.com</value>
+      <value name="ssl">true</value>
+      <value name="maxQueue">65534</value>
+      <value name="keepAliveTimeout">20000</value>
+      <value name="internalPort">-1</value>
+      <value name="curDelay">0</value>
+      <value name="stepsize">10000</value>
+      <value name="suspended">false</value>
+      <value name="alias">localhost</value>
+      <value name="keyStore">venusXSLTP12</value>
+      <value name="trustStore">venusXSLTP12Trust</value>
+      <value name="useJSSE">true</value>
+      <null name="jsseDisabledProtocols"/>
+      <null name="jsseEnabledProtocols"/>
+    </record>
+  </record>
+  <record name="access" javaclass="com.wm.util.Values">
+    <record name="HTTPSListener@9876" javaclass="com.wm.util.Values">
+      <null name="home"/>
+      <value name="default">exclude</value>
+      <record name="nodes" javaclass="com.wm.util.StringSet">
+        <list name="elements">
+        </list>
+      </record>
+      <value name="key">HTTPSListener@9876</value>
+    </record>
+  </record>
+</Values>

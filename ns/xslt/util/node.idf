@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">interface</value>
+  <value name="node_nsName">xslt.util</value>
+  <value name="shared"></value>
+  <value name="encodeutf8">true</value>
+  <value name="extends"></value>
+  <array name="implements" type="value" depth="1">
+  </array>
+  <array name="imports" type="value" depth="1">
+    <value>java.io.*</value>
+    <value>java.lang.SecurityException</value>
+    <value>java.util.Properties</value>
+    <value>wcard.WCardDirFilter</value>
+    <value>com.wm.app.b2b.server.*</value>
+    <value>com.wm.util.ByteOutputBuffer</value>
+    <value>java.util.Hashtable</value>
+    <value>com.wm.data.*</value>
+    <value>com.wm.util.coder.*</value>
+    <value>com.wm.util.xform.*</value>
+  </array>
+</Values>
